@@ -2,9 +2,11 @@ import React from 'react';
 
 const ImageCard = (props) => {
 
-    const { strMealThumb, strMeal, strCategory, strIngredient1, strIngredient2, strIngredient3 } = props.image;
+    const { strArea, strYoutube, strMealThumb, strMeal, strCategory, strIngredient1, strIngredient2, strIngredient3, strIngredient4 } = props.image;
     return (
-        <div className="max-w-sm rounded overflow-hidden shadow-lg">
+
+
+        <div className="max-w-sm rounded overflow-hidden shadow-lg ">
             <img src={strMealThumb} alt="" className="w-full" />
 
             <div className="px-6 py-4">
@@ -18,18 +20,16 @@ const ImageCard = (props) => {
                         {strCategory}
                     </li>
                     <li>
-                        <strong>Gredient : </strong>
-           300
-          </li>
-                    <li>
-                        <strong>Likes : </strong>
-             400
-          </li>
+                        <strong>Area : </strong>
+                        {strArea}
+                    </li>
+
                 </ul>
 
             </div>
 
             <div className="px-6 py-4">
+                <a style={{ textDecoration: 'underline', color: 'blue' }} href={strYoutube} target="_blank">Watch on YouTube</a>
                 <h1 className="text-purple-700 text-opacity-75 text-lg">Gradient:</h1>
 
                 <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
@@ -44,6 +44,10 @@ const ImageCard = (props) => {
 
                 <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mt-2">
                     #{strIngredient3}
+                </span>
+
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mt-2">
+                    #{strIngredient4}
                 </span>
 
 
